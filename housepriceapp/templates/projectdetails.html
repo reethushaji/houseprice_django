@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<meta charset="utf-8">
+		<title>Add New Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+
+	<body>
+		<div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    
+			<a href="/builderhome/"> <img src="{% static 'images/image-7.png' %}" width="100px" height="100px" style="position:absolute;left: -10px;top:-17px;"></a>	
+			<a href="/builderhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+		<div class="wrapper">
+			<div class="inner">
+				<img src="images/image-1.png" alt="" class="image-1">
+				<form action="/projectac?bid={{bid}}">
+					<h3>New Project?</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-apartment"></span>
+						<input type="text" class="form-control" name='name' placeholder="Name">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-map-marker"></span>
+						<input type="text" class="form-control" name='loc' placeholder="Location">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-home"></span>
+						<input type="text" class="form-control" name='bed' placeholder="Number of Floors">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-frame-expand"></span>
+						<input type="text" class="form-control" name='sq' placeholder="Basement Sq.ft">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-home"></span>
+						<input type="text" class="form-control" name='rsq' placeholder="Total Units">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-license"></span>
+						<input type="text" class="form-control" name='rno' placeholder="Registration Number">
+					</div>
+					<button>
+						<span>Add Project</span>
+					</button>
+				</form>
+				<img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+			</div>
+	</body>
+</html>

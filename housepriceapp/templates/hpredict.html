@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    
+			<a href="/userhome/"> <img src="{% static 'images/image-7.png' %}" width="100px" height="100px" style="position:absolute;left: -10px;top:-17px;"></a>
+	<a href="/userhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+           
+    <div class="wrapper">
+       
+        <div class="inner">
+             <img src="{% static 'images/image-3.png' %}" width="150px" height="150px" style="position:absolute;top:5x;left: -5px;z-index: 99;float: left; margin-left: -120px;">
+       <form>
+        <h3>High Price </h3>
+            <div style="width:100%;background-color:#DD8C91;">
+                
+           <table border="1" style="border-collapse: collapse;width:100%;color: black;border:2px solid black;">
+              
+               {% for i in hlist%}
+               <tr><td>
+               <table>
+               <tr>
+                <th>Builder Name</th> <th>{{i.bname}}</th></tr>
+                <tr><th>Project Name</th> <td>{{i.pname}}</td></tr>
+                <tr><th>No. of Bed</th> <td>{{i.bed}}</td></tr>
+                <tr><th>No. of Bathroom</th> <td>{{i.bath}}</td></tr>
+                <tr><th>Total Sqft</th> <td>{{i.tsq}}</td></tr>
+                <tr><th>Rate / Sqft</th> <td>{{i.rsq}}</td></tr>
+                <tr><th>Location</th> <td>{{i.loc}}</td></tr>
+                
+				
+            </table></td></tr>
+           
+               {% endfor%}
+           </table>
+           {% for i in hplist%}
+           <h2 style="font-family: 'Muli-SemiBold';text-align:center;color:black;text-transform:uppercase;padding:10px">High Price Location <br/> {{i.loc}}  </h2>
+           {% endfor%}
+        </div>
+    </form>
+
+    <form>
+        <h3>Low Price </h3>
+            <div style="width:100%;background-color:#DD8C91;">
+                
+           <table border="1" style="border-collapse: collapse;width:100%;color: black;border:2px solid black;">
+              
+               {% for i in llist%}
+               <tr><td>
+               <table>
+               <tr>
+                <th>Builder Name</th> <th>{{i.bname}}</th></tr>
+                <tr><th>Project Name</th> <td>{{i.pname}}</td></tr>
+                <tr><th>No. of Bed</th> <td>{{i.bed}}</td></tr>
+                <tr><th>No. of Bathroom</th> <td>{{i.bath}}</td></tr>
+                <tr><th>Total Sqft</th> <td>{{i.tsq}}</td></tr>
+                <tr><th>Rate / Sqft</th> <td>{{i.rsq}}</td></tr>
+                <tr><th>Location</th> <td>{{i.loc}}</td></tr>
+                
+				
+            </table></td></tr>
+           
+               {% endfor%}
+           </table>
+           {% for i in lplist%}
+           <h2 style="font-family: 'Muli-SemiBold';text-align:center;color:black;text-transform:uppercase;padding:10px">Low Price Location <br/>{{i.loc}}  </h2>
+           {% endfor%}
+        </div>
+    </form>
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

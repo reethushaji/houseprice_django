@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Ask Query</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    <a href="/userhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+           
+    <div class="wrapper">
+       
+        <div class="inner">
+            <img src="{% static 'images/image-6.png' %}" width="200px" height="200px" style="position: absolute;bottom: 230px;left: -5px;z-index: 99;float: left; margin-left: -140px;">
+       <form action="/que/">
+            <h3>Ask Query</h3><input type="hidden" name="pid" value="{{pid}}">
+			<textarea class="form-control" rows="5" cols="40" name="q" placeholder="Enter query here"></textarea>
+			<button>
+				<span>Submit</span>
+			</button>
+			
+    </form>
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

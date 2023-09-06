@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<meta charset="utf-8">
+		<title>Builder Registration</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+
+	<body>
+<div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    
+			<a href="/index/"> <img src="{% static 'images/image-7.png' %}" width="100px" height="100px" style="position:absolute;left: -10px;top:-17px;"></a></div>
+		<div class="wrapper">
+			<div class="inner">
+				<img src="{% static 'images/image-1.png' %}" alt="" class="image-1">
+				<form action="/builder/">
+					<h3>New Builder?</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input type="text" class="form-control" name="name" placeholder="Name">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input type="text" class="form-control" name="phn" placeholder="Phone Number">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input type="text" class="form-control" name="mail" placeholder="Mail">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-location"></span>
+						<input type="text" class="form-control" name="add" placeholder="Office Address">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-license"></span>
+						<input type="text" class="form-control" name="lno" placeholder="Registration/License Number">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" name="pass" placeholder="Password">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" name="cpass" placeholder="Confirm Password">
+					</div>
+					<button>
+						<span>Register</span>
+					</button>
+				</form>
+				<img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<meta charset="utf-8">
+		<title>Flat Details</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+
+	<body>
+	<div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    
+			<a href="/vproject/"> <img src="{% static 'images/image-7.png' %}" width="100px" height="100px" style="position:absolute;left: -10px;top:-17px;"></a>
+			<a href="/builderhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+
+		<div class="wrapper">
+			<div class="inner">
+				<!---<img src="{% static 'images/image-1.png' %}" alt="" class="image-1"> --->
+				<form action="/flat/">
+					<h3>Flat Details</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-apartment"></span>
+						<input type="text" class="form-control" name='cat' placeholder="Category">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-home"></span>
+						<input type="text" class="form-control" name='bed' placeholder="Bedrooms">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-home"></span>
+						<input type="text" class="form-control" name='bath' placeholder="Bathrooms">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-menu"></span>
+						<input type="text" class="form-control" name='fn' placeholder="Floor Number">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-frame-expand"></span>
+						<input type="text" class="form-control" name='sq' placeholder="Total Sq.ft">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-frame-expand"></span>
+						<input type="text" class="form-control" name='lsq' placeholder="Living Room Sq.ft">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-layers"></span>
+						<input type="text" class="form-control" name='rate' placeholder="Rate per Sq.Ft">
+					</div>
+					<input type="hidden" id="custId" name="pid" value="{{id}}">
+					<button>
+						<span>Add Details</span>
+					</button>
+				</form>
+				<img src="{% static 'images/image-4.png' %}" alt="" style="position: absolute;bottom:3px;right: -350px;">
+			</div>
+			
+		</div>
+	</body>
+</html>

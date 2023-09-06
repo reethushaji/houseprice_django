@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>View Queries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <div style="width:100%;height:50px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:7px;">
+    <br/>  
+			<a href="/vproject/"> <img src="{% static 'images/image-7.png' %}" width="100px" height="100px" style="position:absolute;left: -10px;top:-17px;"></a>
+			<a href="/builderhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+           
+    <div class="wrapper">
+       
+        <div class="inner">
+            <img src="{% static 'images/image-6.png' %}" width="200px" height="200px" style="position: absolute;bottom: 200px;left: -5px;z-index: 99;float: left; margin-left: -140px;">
+		<h3>Queries</h3>
+       <form>
+            <div style="width:100%;background-color:#DD8C91;">
+           <table border='2' style="border-collapse: collapse;width:100%;color: black;border:2px solid black;">
+              
+               {% for i in qlist%}
+               <tr><td>
+               <table>
+               <tr>
+                <th>Name</th> <td>{{i.name}}</td></tr>
+                <tr><th>Query</th> <td>{{i.que}}</td></tr>
+            </table></td></tr>
+               {% endfor%}
+           </table>
+        </div>
+    </form>
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

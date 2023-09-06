@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Builders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  
+           
+    <div class="wrapper">
+	<a href="/userhome/" style="background-color: brown;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: brown;color: white;padding:10px;">Logout</a> </div>
+       
+        <div class="inner">
+            <img src="{% static 'images/image-1.png' %}" alt="" class="image-1">
+       <form>
+			<h3>Builders</h3>
+            <div style="width:100%;background-color: rgba(236, 199, 241, 0.8);">
+           <table border="1" style="border-collapse: collapse;width:100%;color: black;">
+              
+               {% for i in blist %}
+               <tr><td>
+               <table>
+               <tr>
+                <th>Builder Name</th> <td>{{i.name}}</td></tr>
+                <tr><th>Address</th> <td>{{i.address}}</td></tr>
+                <tr><th>Contact No</th> <td>{{i.phnno}}</td></tr>
+                <tr><th>Email Id</th> <td>{{i.email}}</td></tr>
+                <tr><th>Registration No</th><td>{{i.regno}}</td></tr>
+				<tr><td><a href="/vproject1?id={{i.bid}}">View Projects</a></td></tr>
+            </table></td></tr>
+               {% endfor%}
+           </table>
+        </div>
+    </form>
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

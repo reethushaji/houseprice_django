@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>LUser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    <a href="/adminhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+           
+    <div class="wrapper">
+       
+        <div class="inner">
+            <img src="{% static 'images/image-1.png' %}" alt="" class="image-1">
+       <form>
+			<h3>Users</h3>
+            <div style="width:100%;background-color:#DD8C91;">
+           <table border=1 style="border-collapse: collapse;width:100%;color: black;border:2px solid black;">
+              
+               {% for i in ulist %}
+               <tr><td>
+               <table>
+               <tr>
+                <th>User Name</th> <td>{{i.name}}</td></tr>
+                <tr><th>Contact No</th> <td>{{i.phnno}}</td></tr>
+                <tr><th>Email Id</th> <td>{{i.email}}</td></tr>
+            </table></td></tr>
+               {% endfor%}
+           </table>
+        </div>
+    </form>
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <div class="wrapper">
+	
+        <div class="inner">
+		
+             <img src="{% static 'images/image-3.png' %}" width="150px" height="150px" style="position: absolute;bottom: 430px;left: -5px;z-index: 99;float: left; margin-left: -120px;">
+            <form>
+<h3>Welcome</h3>
+            <button style="background-color:lightcoral;">
+                <span><a href="/user_registration/" style="color:#551a8b;">User Registration</a></span> </button>
+            <button style="background-color:lightcoral;">
+                <span> <a href="/builder_registration/" style="color:#551a8b;">Builder Registration</a></span> </button>
+            <button style="background-color:lightcoral;">
+                <span> <a href="/login/" style="color:#551a8b;">Login</a></span> </button>
+                <button style="background-color:lightcoral;">
+                    <span> <a href="/predict/" style="color:#551a8b;">House Price Prediction (DataSet) </a></span> </button>
+            </form>
+
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

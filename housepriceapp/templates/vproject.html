@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div style="width:100%;height:25px;text-align: right;border-color: blueviolet;background:#accffe;padding-right:20px;padding-top:5px;">
+    <br/>    
+			<a href="/builderhome/"> <img src="{% static 'images/image-7.png' %}" width="100px" height="100px" style="position:absolute;left: -10px;top:-17px;"></a>
+			<a href="/builderhome/" style="background-color: #e05e8a;color: white;padding:10px;">Home</a> 
+          
+         
+            <a href="/login/" style="background-color: #e05e8a;color: white;padding:10px;">Logout</a> </div>
+           
+    <div class="wrapper">
+       
+        <div class="inner">
+           <!--- <img src="{% static 'images/image-1.png' %}" alt="" class="image-1">  ---> 
+       <form>
+			<h3>Projects</h3>
+            <div style="width:100%;background-color:#DD8C91;">
+           <table  style="border-collapse: collapse;width:100%;color: black;border:2px solid black;">
+              
+               {% for i in plist%}
+               <tr><td>
+               <table>
+               <tr>
+                <th>Name</th> <td>{{i.name}}</td></tr>
+                <tr><th>Location</th> <td>{{i.loc}}</td></tr>
+                <tr><th>No. of Floors</th> <td>{{i.nf}}</td></tr>
+                <tr><th>Basement Sq.ft</th> <td>{{i.sqft}}</td></tr>
+				<tr><th>Total Units</th> <td>{{i.rate}}</td></tr>
+                <tr><th>Registration No</th><td>{{i.regno}}</td></tr>
+				
+            </table></td></tr>
+            <tr style="height:40px;">
+				<td><a href="/delp?id={{i.pid}}" style="color: black;background:#7374e3;float:left;margin-left:5px;padding:5px;">Delete</a>
+				<a href="/flat_details?id={{i.pid}}" style="color: black;background:#7374e3;float:left;margin-left:20px;padding:5px;">Add Flat Details</a>
+				<a href="/vqueries?id={{i.pid}}" style="color: black;background:#7374e3;float:right;margin-right:5px;padding:5px;">View Queries</a></td>
+				</tr>
+               {% endfor%}
+           </table>
+        </div>
+    </form>
+            <img src="{% static 'images/image-4.png' %}" alt="" style="position: absolute;bottom:3px;right: -350px;">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

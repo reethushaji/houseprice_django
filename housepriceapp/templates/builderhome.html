@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Builder Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="{% static 'fonts/linearicons/style.css' %}">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="inner">
+            <img src="{% static 'images/image-1.png' %}" alt="" class="image-1">
+            <form>
+<h3>Welcome Builder</h3>
+            <button style="background-color:lightcoral;" action="/projectdetails/">
+                <span><a href="/projectdetails/" style="color:#551a8b;">Add Project</a></span> </button>
+            <button style="background-color:lightcoral;">
+                <span><a href="/vproject/" style="color:#551a8b;">View Project</a></button>
+            <button style="background-color:lightcoral;">
+                <span><a href="/login/" style="color:#551a8b;">Logout</a></span> </button>
+            </form>
+
+            <img src="{% static 'images/image-2.png' %}" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+
